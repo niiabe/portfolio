@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nii Abe | Portfolio Page</title>
+    <meta name="description" content="Portfolio of Nii Abe: Web Developer, Graphic Designer, and Video/Motion Artist. Showcasing web development, graphic design, and motion/video projects.">
+    <meta name="keywords" content="Portfolio, Web Developer, Graphic Designer, Motion Artist, Video, Projects, Your Name">
+    <meta name="author" content="Nii Abe">
+    <link rel="canonical" href="https://github.com/niiabe/portfolio-page/">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Remove all vertical scrolling */
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        .container-fluid, .row {
+            height: 100vh;
+            min-height: 100vh;
+        }
+        main {
+            overflow: auto;
+            height: 100vh;
+        }
+        @media (max-width: 991.98px) {
+            aside, main {
+                height: 50vh;
+            }
+            .row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Sidebar/About Panel -->
+            <aside class="col-lg-3 col-md-4 d-flex flex-column align-items-center justify-content-center shadow-lg py-5 px-3"
+                style="min-width:260px; background-color:#da41e7; height:100vh;">
+                <img src="img/profile/m1.jpg" alt="Nii Abe Profile Picture" class="rounded-full mb-6 border-4 border-white shadow" style="width:200px; height:200px; object-fit:cover;">
+                <h1 class="text-4xl font-bold text-white mb-2">Nii Abe</h1>
+                <p class="text-lg mb-3 text-center text-white">Web Developer<br>Graphic Designer<br>Video/Motion Artist</p>
+                <nav class="w-100" aria-label="Main navigation">
+                    <ul class="nav flex-column text-center">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#webdev">Web Development</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#graphic-design">Graphic Design</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#video-motion">Video/Motion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- Main Content -->
+            <main class="col-lg-9 col-md-8 py-5 px-4" style="height:100vh; overflow:auto;">
+                <!-- Web Development Projects -->
+                <section id="webdev" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold text-[#da41e7] mb-0 mr-3">Web Development Projects</h2>
+                        <a href="#webdev" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Project 1" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 1</h5>
+                                <p class="card-text">Short description of the project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Project 2" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 2</h5>
+                                <p class="card-text">Short description of the project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Project 3" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 3</h5>
+                                <p class="card-text">Short description of the project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Project 4" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 4</h5>
+                                <p class="card-text">Short description of the project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Project 5" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title 5</h5>
+                                <p class="card-text">Short description of the project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Graphic Design Projects -->
+                <section id="graphic-design" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold text-[#da41e7] mb-0 mr-3">Graphic Design</h2>
+                        <a href="#graphic-design" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Design 1" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Title 1</h5>
+                                <p class="card-text">Short description of the design.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Design 2" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Title 2</h5>
+                                <p class="card-text">Short description of the design.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Design 3" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Title 3</h5>
+                                <p class="card-text">Short description of the design.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Design 4" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Title 4</h5>
+                                <p class="card-text">Short description of the design.</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Design 5" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Design Title 5</h5>
+                                <p class="card-text">Short description of the design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video/Motion Projects -->
+                <section id="video-motion" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold text-[#da41e7] mb-0 mr-3">Video/Motion Projects</h2>
+                        <a href="https://www.youtube.com/@LocalInfoMaker" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Video 1" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Video Title 1</h5>
+                                <p class="card-text">Short description of the video/motion project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Video 2" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Video Title 2</h5>
+                                <p class="card-text">Short description of the video/motion project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Video 3" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Video Title 3</h5>
+                                <p class="card-text">Short description of the video/motion project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Video 4" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Video Title 4</h5>
+                                <p class="card-text">Short description of the video/motion project.</p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="https://placehold.co/600x400" class="card-img-top" alt="Video 5" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Video Title 5</h5>
+                                <p class="card-text">Short description of the video/motion project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="text-center py-4">
+                    <p>&copy; 2025 NiiAbe. All rights reserved.</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
