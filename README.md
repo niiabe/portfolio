@@ -35,4 +35,4 @@ To preview locally, open `index.html` in your browser.
 
 ---
 
-© 2023 Nii Abe.
+© 2025 Nii Abe.
