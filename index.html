@@ -8,238 +8,311 @@
     <meta name="keywords" content="Portfolio, Web Developer, Graphic Designer, Motion Artist, Video, Projects, Your Name">
     <meta name="author" content="Nii Abe">
     <link rel="canonical" href="https://github.com/niiabe/portfolio-page/">
-    
-    <!-- Google Fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Oswald:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> -->
+
+
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <style>
+    /* RED SCROLLBAR TEST */
+    ::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #aaa;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    </style>
+    
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-    <header class="site-header">
-        <div class="logo">Nii Abe<span class="logo-dot">.</span></div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-        <nav class="main-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#websites-section">Websites</a></li>
-                <li><a href="#graphic-designs-section">Designs</a></li>
-                <li><a href="#video-projects-section">Videos</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Sidebar/About Panel -->
+            <aside class="col-lg-3 col-md-4 d-flex flex-column align-items-center justify-content-center shadow-lg py-5 px-3"
+                style="min-width:260px; background-color:#da41e7; height:100vh;">
+                <img src="img/profile/m1.jpg" alt="Nii Abe Profile Picture" class="rounded-full mb-6 border-4 border-white shadow" style="width:200px; height:200px; object-fit:cover;">
+                <h1 class="text-4xl font-bold text-white mb-2 mr-2" style="font-family: 'DM Serif Display', serif; font-style: italic; " > Nii Abe </h1>
+                <p>
+                    <a href="https://github.com/niiabe?tab=repositories" target="_blank" title="Github"><img src="img/icons/github-sign.png" alt="github icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.youtube.com/@LocalInfoMaker" target="_blank" title="Youtube "><img src="img/icons/youtube.png" alt="youtube icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>   
+                    <a href="#" target="_blank" title="Behance"><img src="img/icons/behance.png" alt="Behance icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
+                    <a href="#" target="_blank" title="X"><img src="img/icons/twitter.png" alt="X" class="inline-block mr-1" style="width: 24px; height: 24px;"></a> 
+                </p>
+               <p class="text-lg mb-3 text-center text-black-bold">
+                   <strong>I am a passionate person who loves to create and innovate. My expertise lies in multiple fields, including:</strong>                                    
+                </p>
+                <!-- <p class="text-lg mb-3 text-center text-black-bold">
+                    <img src="img/icons/github-brands.svg" alt="github icon" class="inline-block mr-2" style="width: 24px; height: 24px;">
+                    <img src="img/icons/youtube-brands.svg" alt="youtube icon" class="inline-block mr-2" style="width: 24px; height: 24px;">
+                </p> -->
+                <nav class="w-100" aria-label="Main navigation">
+                    <ul class="nav flex-column text-center">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#webdev">Web Development</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#graphic-design">Graphic Design</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-white font-semibold" href="#video-motion">Video/Motion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- Main Content -->
+            <main class="col-lg-9 col-md-8 py-5 px-4" style="height:100vh; overflow:auto;">
+                <!-- Web Development Projects -->
+                <section id="webdev" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold mb-0 mr-3" style="color: #da41e7; font-family: 'DM Serif Display', serif;">Web Development Projects</h2>
+                        <a href="#webdev" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/mathCamp.jpg" class="card-img-top" alt="Math Camp" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Math Camp</strong></h5>
+                                <p class="card-text">
+                                    A web application to help with Arithmetic. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://mathcamp.vercel.app/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/luckLotto.jpg" class="card-img-top" alt="Lucky Lotto" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Lucky Lotto</strong></h5>
+                                <p class="card-text">
+                                    A web application to help with Lotto predictions. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://lucky-lotto-website.vercel.app/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/portfolio.jpg" class="card-img-top" alt="Portfolio Page" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Portfolio Page</strong></h5>
+                                <p class="card-text">
+                                    A personal portfolio page showcasing my projects and skills. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://niiabe.github.io/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/NGO.jpg" class="card-img-top" alt="SOHI NGO Website" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>SOHI NGO</strong></h5>
+                                <p class="card-text">
+                                    A website for SOHI NGO. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://sohi-9c3c0.web.app/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/improp.jpg" class="card-img-top" alt="Improp NGO" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Improp NGO</strong></h5>
+                                <p class="card-text">
+                                    A website for Improp NGO. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://improp-746b3.web.app/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Web/Mcwence.jpg" class="card-img-top" alt="Mcwence Safety" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>McWence Website</strong></h5>
+                                <p class="card-text">
+                                    A website for McWence. Built with HTML, CSS, and JavaScript.
+                                    <a href="https://mcwence.web.app/" target="_blank" class="text-primary" style="text-decoration:underline;">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-    <section class="hero-section">
-        <div class="hero-background-gradient"></div>
-        <div class="hero-content">
-            <!-- Using the provided profile image for Nii Abe -->
-            <p class="hey-there">Hey, <br> there</p>
-            
-            <img src="img/profile/m1.jpg" alt="Nii Abe Profile Picture" class="hero-profile-img">
-            
-            <h1 class="main-title">I AM <br> NII ABE</h1>
-            
-            <p class="specialization">Specialized in Web Development, <br> Graphic Design, and Video/Motion <br> Artistry.</p>
-            
-            <p class="role">WEB <br> DESIGNER <br> & DEVELOPER</p>
+                <!-- Graphic Design Projects -->
+                <section id="graphic-design" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold mb-0 mr-3" style="color: #da41e7; font-family: 'DM Serif Display', serif;">Graphic Design</h2>
+                        <a href="#graphic-design" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Graphics/greenDay.jpg" class="card-img-top" alt="greenDay Ghana" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Green Ghana Day</h5>
+                                <p class="card-text">Made in Canva. 
+                                    <a href="https://www.canva.com/design/DAFlUm0WQxU/ehSD0_MvGr-KvUR6QpPhWQ/edit?utm_content=DAFlUm0WQxU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;"> View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Graphics/NGO1.jpg" class="card-img-top" alt="Volunteer update" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Volunteer Update</h5>
+                                <p class="card-text">
+                                    Made in Canva. 
+                                    <a href="https://www.canva.com/design/DAFqkOgVABs/olnLVCcrpni4CBVeRoshdA/edit?utm_content=DAFqkOgVABs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Graphics/DONATION.jpg" class="card-img-top" alt="Girl Child Hygiene DONATION" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Girl Child Hygiene</h5>
+                                <p class="card-text">
+                                    Made in Canva. 
+                                    <a href="https://www.canva.com/design/DAFjayeFZOc/Tdc9H_ldvV0ab8qm4uzsIw/edit?utm_content=DAFjayeFZOc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;" >View Design</a>    
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Graphics/LinkedIn.jpg" class="card-img-top" alt="LinkedIn Poster Design in Canva" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">LinkedIn Poster Redesign</h5>
+                                <p class="card-text">
+                                    Made in Canva. 
+                                    <a href="https://www.canva.com/design/DAFjkL68670/xWF9WpZoeVqRDQ5jcheZLA/edit?utm_content=DAFjkL68670&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;" >View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Graphics/Smino.jpg" class="card-img-top" alt="Smino Shea butter Social media" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Smino Social Media Poster</h5>
+                                <p class="card-text">
+                                    Made in Canva. 
+                                    <a href="https://www.canva.com/design/DAFzYQm5LPI/cZo3cPn_S3xiza8AbzIWhg/edit?utm_content=DAFzYQm5LPI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;" >View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video/Motion Projects -->
+                <section id="video-motion" class="mb-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="text-3xl font-bold mb-0 mr-3" style="color: #da41e7; font-family: 'DM Serif Display', serif;">Video/Motion Projects</h2>
+                        <a href="https://www.youtube.com/@LocalInfoMaker" class="ml-2 small text-black" style="text-decoration:underline;">See more</a>
+                    </div>
+                    <div class="d-flex flex-row overflow-auto pb-3" style="gap: 1.5rem;">
+                        <!-- Card 1 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img//Projects/Video/Achimota100.jpg" class="card-img-top" alt="Achimota @ 100 Mobile App Walk through" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Achimota App Walk through</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAGsr0cN-Zo/eBkEdWfPnss7kW6_zdVNaQ/edit?utm_content=DAGsr0cN-Zo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>                            
+                                 </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Video/roadSafetyCampaign.jpg" class="card-img-top" alt="Road Safety Campaign" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Road Safety Campaign</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAFjoVt8uNY/1-euYbwPn5cTemACFSUwKg/edit?utm_content=DAFjoVt8uNY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>                            
+                                 </p>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Video/mCelerium.jpg" class="card-img-top" alt="mCelerium Platform Walk through" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">mCelerium Platform Walk through</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAGrdWxR_vA/owOYncHtLTtKWo5-1jfUZA/edit?utm_content=DAGrdWxR_vA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>                            
+                                 </p>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Video/SDG13Video.jpg" class="card-img-top" alt="SDG 13 Quotes" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">SDG 13 Quotes</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAFnYCF0tpI/BAhwgyX7elprT9sxds4ggA/edit?utm_content=DAFnYCF0tpI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>                            
+                                 </p>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Video/LottoMatrix.jpg" class="card-img-top" alt="Lotto Matrix App Setup" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Lotto Matrix App Setup</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAGnXIHAbeQ/JMh-Bl8omwlW8qhrd5xp-g/edit?utm_content=DAGnXIHAbeQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="card shadow" style="min-width: 300px; max-width: 300px;">
+                            <img src="img/Projects/Video/BreastCancer.jpg" class="card-img-top" alt="Breast Cancer Awareness Month" style="height:180px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title font-bold">Breast Cancer Awareness Month</h5>
+                                <p class="card-text">
+                                    Made in Canva.
+                                    <a href="https://www.canva.com/design/DAFyjgpPDW8/HemLjJf97yh9vlnce76PQQ/edit?utm_content=DAFyjgpPDW8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-primary" style="text-decoration:underline;">View Design</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="text-center py-4" style="background-color: #da41e7;">
+                    <p>&copy; 2025 NiiAbe. All rights reserved.</p>
+                </footer>
+            </main>
         </div>
-    </section>
+    </div>
 
-    <!-- Websites Section -->
-    <section id="websites-section" class="projects-category-section">
-        <h2 class="section-heading">WEBSITES</h2>
-        <div class="project-cards-grid">
-            <div class="project-card">
-                <img src="img/Projects/Web/mathCamp.jpg" class="card-img" alt="Math Camp">
-                <div class="card-body">
-                    <h5 class="card-title">Math Camp</h5>
-                    <p class="card-text">A web application to help with Arithmetic.</p>
-                    <a href="https://mathcamp.vercel.app/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Web/luckLotto.jpg" class="card-img" alt="Lucky Lotto">
-                <div class="card-body">
-                    <h5 class="card-title">Lucky Lotto</h5>
-                    <p class="card-text">A web application for Lotto predictions.</p>
-                    <a href="https://lucky-lotto-website.vercel.app/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Web/portfolio.jpg" class="card-img" alt="Portfolio Page">
-                <div class="card-body">
-                    <h5 class="card-title">Personal Portfolio</h5>
-                    <p class="card-text">Showcasing projects and skills.</p>
-                    <a href="https://niiabe.github.io/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <!-- Hidden cards for "See More" functionality -->
-            <div class="project-card hidden">
-                <img src="img/Projects/Web/NGO.jpg" class="card-img" alt="SOHI NGO Website">
-                <div class="card-body">
-                    <h5 class="card-title">SOHI NGO Website</h5>
-                    <p class="card-text">Website for a non-profit organization.</p>
-                    <a href="https://sohi-9c3c0.web.app/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card hidden">
-                <img src="img/Projects/Web/improp.jpg" class="card-img" alt="Improp NGO">
-                <div class="card-body">
-                    <h5 class="card-title">Improp NGO Website</h5>
-                    <p class="card-text">Website for Improp NGO.</p>
-                    <a href="https://improp-746b3.web.app/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card hidden">
-                <img src="img/Projects/Web/Mcwence.jpg" class="card-img" alt="Mcwence Safety">
-                <div class="card-body">
-                    <h5 class="card-title">McWence Website</h5>
-                    <p class="card-text">Website for McWence.</p>
-                    <a href="https://mcwence.web.app/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-        </div>
-        <button class="see-more-button" data-category="websites">See More Websites</button>
-    </section>
-
-    <!-- Graphic Designs Section -->
-    <section id="graphic-designs-section" class="projects-category-section">
-        <h2 class="section-heading">GRAPHIC DESIGNS</h2>
-        <div class="project-cards-grid">
-            <div class="project-card">
-                <img src="img/Projects/Graphics/greenDay.jpg" class="card-img" alt="Green Ghana Day">
-                <div class="card-body">
-                    <h5 class="card-title">Green Ghana Day Poster</h5>
-                    <p class="card-text">Graphic design made in Canva.</p>
-                    <a href="https://www.canva.com/design/DAFlUm0WQxU/ehSD0_MvGr-KvUR6QpPhWQ/edit?utm_content=DAFlUm0WQxU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Design</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Graphics/NGO1.jpg" class="card-img" alt="Volunteer Update">
-                <div class="card-body">
-                    <h5 class="card-title">Volunteer Update Graphic</h5>
-                    <p class="card-text">Social media graphic for NGO.</p>
-                    <a href="https://www.canva.com/design/DAFqkOgVABs/olnLVCcrpni4CBVeRoshdA/edit?utm_content=DAFqkOgVABs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Design</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Graphics/DONATION.jpg" class="card-img" alt="Girl Child Hygiene DONATION">
-                <div class="card-body">
-                    <h5 class="card-title">Girl Child Hygiene Poster</h5>
-                    <p class="card-text">Donation drive graphic.</p>
-                    <a href="https://www.canva.com/design/DAFjayeFZOc/Tdc9H_ldvV0ab8qm4uzsIw/edit?utm_content=DAFjayeFZOc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Design</a>
-                </div>
-            </div>
-            <!-- Hidden cards for "See More" functionality -->
-            <div class="project-card hidden">
-                <img src="img/Projects/Graphics/LinkedIn.jpg" class="card-img" alt="LinkedIn Poster Design in Canva">
-                <div class="card-body">
-                    <h5 class="card-title">LinkedIn Poster Redesign</h5>
-                    <p class="card-text">Professional social media graphic.</p>
-                    <a href="https://www.canva.com/design/DAFjkL68670/xWF9WpZoeVqRDQ5jcheZLA/edit?utm_content=DAFjkL68670&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Design</a>
-                </div>
-            </div>
-            <div class="project-card hidden">
-                <img src="img/Projects/Graphics/Smino.jpg" class="card-img" alt="Smino Shea butter Social media">
-                <div class="card-body">
-                    <h5 class="card-title">Smino Social Media Poster</h5>
-                    <p class="card-text">Promotional graphic for shea butter.</p>
-                    <a href="https://www.canva.com/design/DAFzYQm5LPI/cZo3cPn_S3xiza8AbzIWhg/edit?utm_content=DAFzYQm5LPI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Design</a>
-                </div>
-            </div>
-        </div>
-        <button class="see-more-button" data-category="graphic-designs">See More Designs</button>
-    </section>
-
-    <!-- Video Projects Section -->
-    <section id="video-projects-section" class="projects-category-section">
-        <h2 class="section-heading">VIDEO PROJECTS</h2>
-        <div class="project-cards-grid">
-            <div class="project-card">
-                <img src="img/Projects/Video/Achimota100.jpg" class="card-img" alt="Achimota App Walkthrough">
-                <div class="card-body">
-                    <h5 class="card-title">Achimota App Walkthrough</h5>
-                    <p class="card-text">Mobile app demonstration video.</p>
-                    <a href="https://www.canva.com/design/DAGsr0cN-Zo/eBkEdWfPnss7kW6_zdVNaQ/edit?utm_content=DAGsr0cN-Zo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Video/roadSafetyCampaign.jpg" class="card-img" alt="Road Safety Campaign">
-                <div class="card-body">
-                    <h5 class="card-title">Road Safety Campaign Video</h5>
-                    <p class="card-text">Motion graphic for public awareness.</p>
-                    <a href="https://www.canva.com/design/DAFjoVt8uNY/1-euYbwPn5cTemACFSUwKg/edit?utm_content=DAFjoVt8uNY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/Projects/Video/mCelerium.jpg" class="card-img" alt="mCelerium Platform Walkthrough">
-                <div class="card-body">
-                    <h5 class="card-title">mCelerium Platform Walkthrough</h5>
-                    <p class="card-text">Platform demo video.</p>
-                    <a href="https://www.canva.com/design/DAGrdWxR_vA/owOYncHtLTtKWo5-1jfUZA/edit?utm_content=DAGrdWxR_vA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-            <!-- Hidden cards for "See More" functionality -->
-            <div class="project-card hidden">
-                <img src="img/Projects/Video/SDG13Video.jpg" class="card-img" alt="SDG 13 Quotes">
-                <div class="card-body">
-                    <h5 class="card-title">SDG 13 Quotes Video</h5>
-                    <p class="card-text">Video on climate action quotes.</p>
-                    <a href="https://www.canva.com/design/DAFnYCF0tpI/BAhwgyX7elprT9sxds4ggA/edit?utm_content=DAFnYCF0tpI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-            <div class="project-card hidden">
-                <img src="img/Projects/Video/LottoMatrix.jpg" class="card-img" alt="Lotto Matrix App Setup">
-                <div class="card-body">
-                    <h5 class="card-title">Lotto Matrix App Setup</h5>
-                    <p class="card-text">App setup tutorial video.</p>
-                    <a href="https://www.canva.com/design/DAGnXIHAbeQ/JMh-Bl8omwlW8qhrd5xp-g/edit?utm_content=DAGnXIHAbeQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-            <div class="project-card hidden">
-                <img src="img/Projects/Video/BreastCancer.jpg" class="card-img" alt="Breast Cancer Awareness Month">
-                <div class="card-body">
-                    <h5 class="card-title">Breast Cancer Awareness Video</h5>
-                    <p class="card-text">Awareness campaign video.</p>
-                    <a href="https://www.canva.com/design/DAFyjgpPDW8/HemLjJf97yh9vlnce76PQQ/edit?utm_content=DAFyjgpPDW8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="project-link">View Video</a>
-                </div>
-            </div>
-        </div>
-        <button class="see-more-button" data-category="video-projects">See More Videos</button>
-        <a href="https://www.youtube.com/@LocalInfoMaker" class="see-more-button" target="_blank">See more on Youtube</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-section" class="contact-section">
-        <h2 class="section-heading">GET IN TOUCH</h2>
-        <p class="contact-intro">Have a project in mind or just want to say hello? Feel free to reach out!</p>
-        <div class="contact-details">
-            <p><strong>Phone:</strong> <a href="tel:+11234567890">+233 20 196 6123</a></p>
-            <p><strong>Email:</strong> <a href="mailto:nii.abe@example.com">niiabeabbey@gmail.com/a></p>
-            <p><strong>Address:</strong> Osu, Accra - Ghana.</p>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <p>&copy; 2025 NiiAbe. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/niiabe?tab=repositories" target="_blank" title="Github"><img src="img/icons/github-sign.png" alt="github icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
-            <a href="https://www.youtube.com/@LocalInfoMaker" target="_blank" title="Youtube "><img src="img/icons/youtube.png" alt="youtube icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
-            <a href="#" target="_blank" title="Behance"><img src="img/icons/behance.png" alt="Behance icon" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
-            <a href="#" target="_blank" title="X"><img src="img/icons/twitter.png" alt="X" class="inline-block mr-1" style="width: 24px; height: 24px;"></a>
-        </div>
-    </footer>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
